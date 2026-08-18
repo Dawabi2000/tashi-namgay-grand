@@ -1,0 +1,1187 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    background: white;
+    padding: 20px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #333;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #8b6f47;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 75vh;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: white;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("images/exterior.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   HERO LOGO
+========================= */
+
+.hero-logo {
+    width: 90px;
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 18px;
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero h1 {
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.hero .location {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    background: #333;
+    color: white;
+
+    border-radius: 3px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.welcome,
+.rooms,
+.information,
+.booking {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.welcome h2,
+.rooms h2,
+.information h2,
+.booking h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    max-width: 750px;
+    margin: auto;
+}
+
+
+/* =========================
+   ROOMS
+========================= */
+
+.rooms {
+    background: #f7f5f1;
+}
+
+.room-list {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.room-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.room-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.room-card p {
+    margin-bottom: 20px;
+}
+
+.room-card a {
+    color: #8b6f47;
+    font-weight: bold;
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.information-list {
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+.information-list h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+.booking {
+    background: #e9e3d8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+footer h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 5px 8px;
+        display: inline-block;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .room-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .information-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-logo {
+        width: 70px;
+    }
+
+    .room-list {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome,
+    .rooms,
+    .information,
+    .booking {
+        padding: 60px 25px;
+    }
+
+}/* =========================
+   ROOMS PAGE
+========================= */
+
+.rooms-header {
+    text-align: center;
+    padding: 80px 20px 50px;
+    background: #f7f5f1;
+}
+
+.rooms-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.rooms-header p {
+    font-size: 18px;
+}
+
+
+.rooms-page {
+    padding: 70px 8%;
+}
+
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+
+.room-card {
+    background: white;
+    overflow: hidden;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+
+.room-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.room-card > img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.room-content {
+    padding: 30px;
+}
+
+
+.room-content h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+
+.room-content p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+
+/* =========================
+   ROOMS PAGE MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rooms-header h1 {
+        font-size: 38px;
+    }
+
+    .room-card > img {
+        height: 250px;
+    }
+
+} /* =========================
+   ROOM DETAIL PAGE
+========================= */
+
+.room-detail-header {
+    text-align: center;
+    padding: 80px 20px 50px;
+    background: #f7f5f1;
+}
+
+.room-detail-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.room-detail-header p {
+    font-size: 18px;
+    color: #555;
+}
+
+
+.room-detail {
+    padding: 80px 6%;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+/* TWO PHOTOS ONE ABOVE THE OTHER */
+
+.room-gallery {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+.room-gallery img {
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ROOM INFORMATION */
+
+.room-description {
+    padding-top: 10px;
+}
+
+.room-description h2 {
+    font-size: 36px;
+
+    margin-bottom: 20px;
+}
+
+.room-description p {
+    margin-bottom: 20px;
+
+    color: #555;
+}
+
+.room-description h3 {
+    font-size: 24px;
+
+    margin: 30px 0 15px;
+}
+
+.room-description ul {
+    margin-bottom: 30px;
+
+    padding-left: 20px;
+}
+
+.room-description li {
+    margin-bottom: 8px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .room-detail {
+        grid-template-columns: 1fr;
+
+        padding: 60px 25px;
+    }
+
+    .room-gallery {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .room-gallery img {
+        height: 350px;
+    }
+
+    .room-detail-header h1 {
+        font-size: 38px;
+    }
+
+} /* =========================
+   FACILITIES PAGE
+========================= */
+
+.facilities-header {
+    text-align: center;
+
+    padding: 80px 20px 60px;
+
+    background: #f7f5f1;
+}
+
+.facilities-header h1 {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.facilities-header p {
+    font-size: 18px;
+
+    color: #555;
+}
+
+
+.facilities-page {
+    padding: 80px 8%;
+}
+
+
+.facility-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.facility-card {
+    background: white;
+
+    padding: 40px 25px;
+
+    min-height: 250px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+
+.facility-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+.facility-icon {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+
+.facility-card h2 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+
+.facility-card p {
+    color: #555;
+}
+
+
+/* Facilities Mobile */
+
+@media (max-width: 1000px) {
+
+    .facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .facilities-header h1 {
+        font-size: 38px;
+    }
+
+    .facilities-page {
+        padding: 60px 25px;
+    }
+
+    .facility-grid {
+        grid-template-columns: 1fr;
+    }
+
+} .facility-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+} /* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-header {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background: #f7f5f1;
+}
+
+.contact-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.contact-header p {
+    font-size: 18px;
+    color: #555;
+}
+
+
+.contact-page {
+    padding: 80px 15%;
+}
+
+
+.contact-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+
+.contact-content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+
+.contact-item {
+    margin-top: 35px;
+}
+
+
+.contact-item h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+
+.contact-item a {
+    color: #8b6f47;
+    font-size: 18px;
+} /* =========================
+   ABOUT PAGE
+========================= */
+
+.about-header {
+    text-align: center;
+
+    padding: 80px 20px 60px;
+
+    background: #f7f5f1;
+}
+
+.about-header h1 {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.about-header p {
+    font-size: 18px;
+
+    color: #555;
+}
+
+
+/* About Introduction */
+
+.about-introduction {
+    padding: 80px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.about-image img {
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+}
+
+
+.about-text h2 {
+    font-size: 38px;
+
+    margin-bottom: 25px;
+}
+
+
+.about-text p {
+    margin-bottom: 20px;
+
+    color: #555;
+}
+
+
+/* Why Stay */
+
+.why-stay {
+    padding: 80px 8%;
+
+    background: #f7f5f1;
+
+    text-align: center;
+}
+
+
+.why-stay h2 {
+    font-size: 38px;
+
+    margin-bottom: 45px;
+}
+
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.why-card {
+    background: white;
+
+    padding: 40px 30px;
+
+    min-height: 200px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.why-card h3 {
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+
+.why-card p {
+    color: #555;
+}
+
+
+/* About Rooms */
+
+.about-rooms {
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+
+.about-rooms h2 {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+
+.about-rooms p {
+    margin-bottom: 30px;
+
+    color: #555;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .about-introduction {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+} /* =========================
+   LOBBY SECTION
+========================= */
+
+.lobby-section {
+    padding: 80px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    background: #f7f5f1;
+}
+
+
+.lobby-image img {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+}
+
+
+.lobby-text {
+    padding: 20px;
+}
+
+
+.lobby-text h2 {
+    font-size: 36px;
+
+    margin-bottom: 25px;
+}
+
+
+.lobby-text p {
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 800px) {
+
+    .lobby-section {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .lobby-image img {
+        height: 350px;
+    }
+
+} /* =========================
+   LOCATION PAGE
+========================= */
+
+.location-header {
+    text-align: center;
+
+    padding: 80px 20px 60px;
+
+    background: #f7f5f1;
+}
+
+.location-header h1 {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.location-header p {
+    font-size: 18px;
+
+    color: #555;
+}
+
+
+.location-page {
+    padding: 80px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+.location-content h2 {
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.location-content > p {
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+
+.location-details {
+    margin: 35px 0;
+}
+
+.location-details h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+.location-image img {
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+}
+
+
+@media (max-width: 800px) {
+
+    .location-page {
+        grid-template-columns: 1fr;
+    }
+
+    .location-image img {
+        height: 350px;
+    }
+
+} /* =========================
+   BHUTAN POLICY PAGE
+========================= */
+
+.bhutan-policy-header {
+    text-align: center;
+
+    padding: 80px 20px 60px;
+
+    background: #f7f5f1;
+}
+
+.bhutan-policy-header h1 {
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.bhutan-policy-header p {
+    font-size: 18px;
+
+    color: #555;
+}
+
+
+/* Introduction */
+
+.bhutan-policy-intro {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 80px 25px;
+
+    text-align: center;
+}
+
+.bhutan-policy-intro h2 {
+    font-size: 36px;
+
+    margin-bottom: 25px;
+}
+
+.bhutan-policy-intro p {
+    color: #555;
+
+    margin-bottom: 18px;
+}
+
+
+/* Policy Sections */
+
+.policy-section {
+    padding: 80px 8%;
+
+    background: white;
+}
+
+.policy-section h2 {
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 45px;
+}
+
+
+/* Indian Section */
+
+.indian-section {
+    background: #f7f5f1;
+}
+
+
+/* Policy Grid */
+
+.policy-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* Policy Cards */
+
+.policy-card {
+    background: white;
+
+    padding: 35px;
+
+    border: 1px solid #eee;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.indian-section .policy-card {
+    background: white;
+}
+
+
+.policy-number {
+    color: #8b6f47;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.policy-card h3 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+
+.policy-card p {
+    color: #555;
+
+    margin-bottom: 15px;
+}
+
+
+/* Important Notice */
+
+.policy-notice {
+    max-width: 900px;
+
+    margin: 80px auto;
+
+    padding: 45px;
+
+    background: #e9e3d8;
+
+    text-align: center;
+}
+
+.policy-notice h2 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.policy-notice p {
+    color: #555;
+
+    margin-bottom: 15px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .policy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bhutan-policy-header h1 {
+        font-size: 38px;
+    }
+
+    .policy-section {
+        padding: 60px 25px;
+    }
+
+    .policy-notice {
+        margin: 60px 25px;
+
+        padding: 35px 25px;
+    }
+
+}
